@@ -1,9 +1,10 @@
 import React from 'react';
 import { Meta, Story } from '@storybook/react';
+import { withDesign } from 'storybook-addon-designs';
 import { Thing, Props } from '../src';
 
 const meta: Meta = {
-  title: 'Welcome',
+  title: 'Buttons',
   component: Thing,
   argTypes: {
     children: {
@@ -14,7 +15,13 @@ const meta: Meta = {
   },
   parameters: {
     controls: { expanded: true },
+    design: {
+      type: 'figma',
+      url:
+        'https://www.figma.com/file/1bzWImSTgy7SEZajf36Zu3/Shipwright-UI-Kit-Community?node-id=20%3A22187',
+    },
   },
+  decorators: [withDesign],
 };
 
 export default meta;

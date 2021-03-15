@@ -9,4 +9,31 @@ module.exports = {
   typescript: {
     check: true, // type-check stories during Storybook build
   },
+  refs: config => {
+    //👇 Retrieves the current environment from the config object
+    const { configType } = config || {};
+
+    if (configType === 'DEVELOPMENT') {
+      return {
+        projectA: {
+          title: 'Project A (local)',
+          url: 'http://localhost:7007',
+        },
+        projectB: {
+          title: 'Project B (local)',
+          url: 'http://localhost:8008',
+        },
+      };
+    }
+    return {
+      projectA: {
+        title: 'Project A (prod)',
+        url: 'https://ds-project-a.netlify.app/',
+      },
+      projectB: {
+        title: 'Project B (prod)',
+        url: 'https://ds-project-b.netlify.app/',
+      },
+    };
+  },
 };

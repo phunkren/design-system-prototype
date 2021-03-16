@@ -9,10 +9,8 @@ module.exports = {
   typescript: {
     check: true, // type-check stories during Storybook build
   },
-  refs: config => {
-    //👇 Retrieves the current environment from the config object
-    const { configType } = config || {};
-
+  refs: (_, { configType }) => {
+    
     if (configType === 'DEVELOPMENT') {
       return {
         projectA: {
@@ -25,6 +23,7 @@ module.exports = {
         },
       };
     }
+    
     return {
       projectA: {
         title: 'Project A (prod)',

@@ -8,11 +8,8 @@ module.exports = {
     "@storybook/addon-essentials",
     "@storybook/preset-create-react-app"
   ],
-  refs: (config) => {
-    //👇 Retrieves the current environment from the config object
-    const { configType } = config || {}; 
-
-    console.log('a', { configType, config});
+  refs: (_, { configType }) => {
+    console.log('a', { configType });
 
     if (configType === 'DEVELOPMENT') {
       return {

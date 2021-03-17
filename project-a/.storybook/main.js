@@ -9,8 +9,6 @@ module.exports = {
     "@storybook/preset-create-react-app"
   ],
   refs: (_, { configType }) => {
-    console.log('a', { configType });
-
     if (configType === 'DEVELOPMENT') {
       return {
         ui: {
@@ -19,6 +17,7 @@ module.exports = {
         }, 
       };
     }
+    
     return {
       ui: {
         title: 'UI Library (prod)',

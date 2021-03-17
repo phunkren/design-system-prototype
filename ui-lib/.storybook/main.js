@@ -1,8 +1,12 @@
 module.exports = {
-  stories: ['../stories/**/*.stories.@(ts|tsx|js|jsx)'],
+  stories: [
+    '../src/stories/**/*.stories.mdx',
+    '../src/stories/**/*.stories.@(ts|tsx|js|jsx)',
+  ],
   addons: [
     '@storybook/addon-links',
     '@storybook/addon-essentials',
+    '@storybook/addon-a11y',
     'storybook-addon-designs',
   ],
   // https://storybook.js.org/docs/react/configure/typescript#mainjs-configuration
@@ -10,7 +14,6 @@ module.exports = {
     check: true, // type-check stories during Storybook build
   },
   refs: (_, { configType }) => {
-    
     if (configType === 'DEVELOPMENT') {
       return {
         projectA: {
@@ -23,7 +26,7 @@ module.exports = {
         },
       };
     }
-    
+
     return {
       projectA: {
         title: 'Project A (prod)',

@@ -6,11 +6,10 @@ module.exports = {
   "addons": [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
-    "@storybook/preset-create-react-app"
+    "@storybook/preset-create-react-app",
+    "storybook-addon-designs",
   ],
   refs: (_, { configType }) => {  
-    console.log('b', { configType});
-
     if (configType === 'DEVELOPMENT') {
       return {
         ui: {

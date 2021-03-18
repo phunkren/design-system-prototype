@@ -1,0 +1,83 @@
+.card {
+    display: flex;
+    flex-flow: column;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 4px rgba(105, 112, 117, 0.2);
+    border-radius: 4px;
+    max-width: 300px;
+}
+
+.card--standard {
+    padding: 1rem;
+}
+
+.card--imgTop {
+    padding: 0;
+}
+
+.card--imgTop *:not(img) {
+    padding: 0.5rem 1rem;
+}
+
+.card--imgTop img {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.card--rounded {
+    flex-flow: row;
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.card--rounded * {
+    flex: 1 1 auto;
+}
+
+.card--rounded * + * {
+    padding-left: 1rem;
+}
+
+.card--rounded img {
+   width: 60px;
+   height: 60px;
+   border-radius: 8px;
+   margin-right: 1rem;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.title--standard {
+    font-weight: 400;
+}
+
+.title--semibold {
+    font-weight: 600;
+}
+
+.title--bold {
+    font-weight: 800;
+}
+
+.subtitle {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle--standard {
+    font-size: 1rem;
+}
+
+.subtitle--small {
+    font-size: 0.75rem;
+}
+
+.subtitle--large {
+    font-size: 1.25rem;
+}

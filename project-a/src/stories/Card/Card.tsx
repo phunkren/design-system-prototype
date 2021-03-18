@@ -1,25 +1,33 @@
 import * as React from 'react';
 import {CardProps, CardTitleProps, CardSubtitleProps } from './Card.d';
-
+import './card.css';
 /**
  * Primary UI component for user interaction
  */
 export const CardTitle: React.FC<CardTitleProps> = ({
   children,
+  variant = 'standard',
   ...props
-}) => <h2 className='title' {...props}>{children}</h2>;
+}) => {
+  const variantClassname = `title--${variant}`;
+  return <h2 className={['title', variantClassname].join(' ')} {...props}>{children}</h2>;
+};
 
 export const CardSubtitle: React.FC<CardSubtitleProps> = ({
   children,
+  variant = 'standard',
   ...props
-}) => <p className='copy' {...props}>{children}</p>;
+}) => {
+  const variantClassname = `subtitle--${variant}`;
+  return <p className={['subtitle', variantClassname].join(' ')} {...props}>{children}</p>;
+};
 
 export const Card: React.FC<CardProps> = ({
   children,
-  variant, 
+  variant = 'standard', 
   ...props
 }) => {
-  const variantClassname = variant ? `card--${variant}` : null;
+  const variantClassname = `card--${variant}`;
 
   return (
     <div className={['card', variantClassname].join(' ')} {...props}>

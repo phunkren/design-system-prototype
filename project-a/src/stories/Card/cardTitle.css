@@ -1,0 +1,17 @@
+.title {
+    font-size: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.title--standard {
+    font-weight: 400;
+}
+
+.title--semibold {
+    font-weight: 600;
+}
+
+.title--bold {
+    font-weight: 800;
+}

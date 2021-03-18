@@ -1,0 +1,17 @@
+.subtitle {
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+}
+
+.subtitle--standard {
+    font-size: 1rem;
+}
+
+.subtitle--small {
+    font-size: 0.75rem;
+}
+
+.subtitle--large {
+    font-size: 1.25rem;
+}

@@ -1,4 +1,9 @@
+import { withDesign } from 'storybook-addon-designs';
 
+// https://storybook.js.org/docs/react/writing-stories/parameters#global-parameters
 export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-}
+  // https://storybook.js.org/docs/react/essentials/actions#automatically-matching-args
+  actions: { argTypesRegex: '^on.*' },
+};
+
+export const decorators = [withDesign];

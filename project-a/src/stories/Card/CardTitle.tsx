@@ -1,5 +1,5 @@
 import * as React from 'react';
-import {CardTitleProps } from './CardTitle.d';
+import { CardTitleProps } from './CardTitle.d';
 import './cardTitle.css';
 /**
  * Primary UI component for user interaction

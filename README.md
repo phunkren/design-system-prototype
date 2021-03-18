@@ -2,7 +2,10 @@
 ## Critique 
 
 > All components are shown at 100% of screen which is correct but unrealistic/ugly in some cases (could argue that's the responsibility of the component though - not storybook)
-- 
+/** The layout property defines basic styles added to the preview body where the story is rendered. If you pass 'none', no styles are applied. */
+layout?: 'centered' | 'fullscreen' | 'padded' | 'none';
+
+
 
 ## Notes 
 
@@ -13,15 +16,14 @@
 - Since you cannot derive any meaningful properties from the design, is there any real benefit to seeing this alongside the story?
 
 ### Composition: Referencing local storybooks 
-
 - it looks like the order of the run commands matters. 
 - to display other storybooks you have to run them before the main storybook, otherwise they show as infinitely loading
-- is there any real benefit to having this, as opposed ot having multiple tabs open?
+- is there any real benefit to having this, as opposed to having multiple tabs open?
 
 
 ### Composition: Referencing deployed Storybooks
 - Deployed Storybooks on Netlify are showing as errors (looks like a CORS error to retrieve the stories.json files)
-
+- Deployed errors fixed by adding `Access-Control-Allow-Origin = "*"` rule in netlify.toml files
 
 ### HMR
 

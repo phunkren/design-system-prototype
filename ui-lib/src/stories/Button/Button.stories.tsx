@@ -19,23 +19,19 @@ const meta: Meta = {
   },
 };
 
-// Simple
-// export const SimplePrimary: React.VFC<{}> = () => <Button label="Button" />;
-// export const SimpleSecondary: React.VFC<{}> = () => <Button label="😄👍😍💯" />;
-
 // Template
 //👇 We create a “template” of how args map to rendering
-export const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = args => <Button {...args} />;
 Template.args = {};
 
 //👇 Each story then reuses that template
-export const TemplatePrimary = Template.bind({});
-TemplatePrimary.args = {
+export const Primary = Template.bind({});
+Primary.args = {
   label: 'Primary',
   primary: true,
 };
 
-export const TemplateSecondary = Template.bind({});
-TemplateSecondary.args = { ...Template.args, label: 'Secondary' };
+export const Secondary = Template.bind({});
+Secondary.args = { ...Template.args, label: 'Secondary' };
 
 export default meta;

@@ -35,6 +35,7 @@ export const ImgTopCard: Story<CardProps> = args => (
         <img src={EX_IMG_SRC} alt={EX_IMG_ALT} />
         <CardTitle>Card title</CardTitle>
         <CardSubtitle />
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. A leo odio magna amet phasellus ultricies urna. Sit nisl blandit rutrum a est in scelerisque.</p>
     </Card>
 );
 
@@ -45,7 +46,7 @@ export const RoundedCard: Story<CardProps> = args => (
             <CardTitle>Heather short</CardTitle>
             <CardSubtitle>(123)456-7890</CardSubtitle>
         </div>
-        <Button label='Call' />
+        {/* <Button label='Call' /> */}
     </Card>
 );
 
